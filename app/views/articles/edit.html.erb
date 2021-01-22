@@ -1,4 +1,4 @@
-<h1>Create a new Article</h1>
+<h1>Edit Article</h1>
 
 <%#if @article.errors.any? %>
 <!--  <h2>The following errors prevented the article from being saved</h2>-->
@@ -8,7 +8,7 @@
 <!--    </ul>-->
   <%#end %>
 <%#end %>
-<%#= form_with scope: :article, url: articles_path, local: true do |f|  %>
+<%#= form_with model: @article, local: true do |f|  %>
 <!--  <%#= f.label :title %><br/>-->
 <!--  <%#= f.text_field :title %><br/>-->
 
@@ -22,6 +22,7 @@
 <!--  </p>-->
 
 <%# end %>
+
 <%= render 'articles/form'%>
 
-<%= link_to 'Home Page', articles_path %>
+<%= link_to 'Articles Listing', articles_path %>
